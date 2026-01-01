@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Portfolio | ICT OEL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h2>My Portfolio</h2>
+    <ul id="navLinks">
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#academic">Academics</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle">🌙</button></li>
+    </ul>
+</nav>
+
+<!-- Profile Section -->
+<section id="profile" class="section">
+    <img src="ProfilePhoto.jpeg" alt="Profile Picture" class="profile-img">
+    <h1>Muhammad Awais Khan</h1>
+    <p><strong>Registration No:</strong> 10-001-2025-02172</p>
+    <p>BS Computer Science student at UET Abbottabad. Passionate about web development and cybersecurity.</p>
+</section>
+
+<!-- Academic Background -->
+<section id="academic" class="section">
+    <h2>Academic Background</h2>
+
+    <input type="text" id="searchInput" placeholder="Search qualification...">
+
+    <table id="academicTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Level</th>
+                <th onclick="sortTable(1)">Institute</th>
+                <th onclick="sortTable(2)">Year</th>
+                <th onclick="sortTable(3)">Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matric</td>
+                <td>Bright Vission Model School and College Haripur</td>
+                <td>2023</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Intermediate</td>
+                <td>Bright Vission Model School and College Haripur</td>
+                <td>2025</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>BS Computer Science</td>
+                <td>UET Abbottabad</td>
+                <td>2025–Present</td>
+                <td>In Progress</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- CV Viewer -->
+<section id="cv" class="section">
+    <h2>My CV</h2>
+    <button onclick="loadCV()">View CV</button>
+    <div id="cvViewer"></div>
+</section>
+
+<h2>Interactive Progress Tracker</h2>
+<div class="progress-container">
+  <div class="progress-bar"><div>0%</div></div>
+  <div class="progress-bar"><div>0%</div></div>
+  <div class="progress-bar"><div>0%</div></div>
+  <button onclick="updateProgress()">Update Progress</button>
+</div>
+
+<h2>Image Gallery</h2>
+<div class="gallery">
+  <img src="SS1.jpg" alt="Image 1">
+  <img src="SS2.jpg" alt="Image 2">
+  <img src="SS3.jpg" alt="Image 3">
+  <img src="SS4.jpg" alt="Image 4">
+</div>
+
+<div class="lightbox" onclick="this.style.display='none'">
+  <img src="" alt="Lightbox Image">
+</div>
+
+<!-- Contact Form -->
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="formStatus"></p>
+</section>
+
+<footer>
+    <p>© 2025 ICT OEL Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
